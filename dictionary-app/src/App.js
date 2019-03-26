@@ -16,7 +16,11 @@ class App extends Component {
       word: "",
       versions: [],
       shortdef: "",
-      partOfSpeech: ""
+      partOfSpeech: "",
+      quote1Text: "",
+      quote1Author: "",
+      quote2Text: "",
+      quote2Author: ""
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -52,10 +56,16 @@ class App extends Component {
         word: json[0].meta,
         versions: json[0].meta.stems,
         shortdef: json[0].shortdef,
-        partOfSpeech: json[0].fl
+        partOfSpeech: json[0].fl,
+        quote1Text: json[0].def[0].sseq[0][0][1].dt[1][1][0].t,
+        quote1Author: json[0].def[0].sseq[0][0][1].dt[1][1][0].aq.auth,
+        quote2Text: json[0].def[0].sseq[0][0][1].dt[1][1][1].t,
+        quote2Author: json[0].def[0].sseq[0][0][1].dt[1][1][1].aq.auth  
       })
       console.log('word', this.state.word)
       console.log('versions', this.state.versions)
+      console.log('quote1Text', this.state.quoteText)
+      console.log('quote1Author', this.state.quoteAuthor)
     })
     .catch(e => 
       console.log(e)
@@ -93,6 +103,12 @@ class App extends Component {
         <p>{this.state.partOfSpeech}</p>
         <div>{this.renderStems()}</div>
         <p>{this.state.shortdef}</p>
+        <div className="quotes">
+          <p>{this.state.quote1Text}</p>
+          <p>{this.state.quote1Author}</p>
+          <p>{this.state.quote2Text}</p>
+          <p>{this.state.quote2Author}</p>
+        </div>
       </div>
     );
   }
