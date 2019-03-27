@@ -72,8 +72,10 @@ class Search extends Component {
             </div>
         
             <button onClick={this.handleClick}>Get News</button>
-            <div className="articles">{this.renderArticles()}</div>
-        </div>
+            {this.props.keyword &&
+                <div className="articles">{this.renderArticles()}</div>
+            }
+            </div>
     )
     
     }
