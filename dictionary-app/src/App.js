@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Link } from 'react-router-dom'
 import Homepage from './Homepage'
 import Search from './Search'
+import News from './News'
 import PocketDictionary from './PocketDictionary'
 import Footer from './Footer'
 
@@ -18,7 +19,7 @@ class App extends Component {
       versions: [],
       shortdef: "",
       partOfSpeech: "",
-      audio: ""
+      pronunciation: ""
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -56,6 +57,7 @@ class App extends Component {
             versions: json[0].meta.stems,
             shortdef: json[0].shortdef,
             partOfSpeech: json[0].fl,
+            pronunciation: json[0].hwi.prs[0].mw
           })
           console.log('word', this.state.word)
           console.log('keyword', this.state.keyword)
@@ -89,11 +91,13 @@ class App extends Component {
                   keyword={this.state.keyword}
                   handleChange={this.handleChange}
                   handleSubmit={this.handleSubmit}
+                  pronunciation={this.state.pronunciation}
                   partOfSpeech={this.state.partOfSpeech}
                   renderStems={this.renderStems}
                   shortdef={this.state.shortdef}
                   {...props} />}
             />
+            <News keyword={this.state.keyword}/>
             <Route path="/pocket" component={PocketDictionary} />
           </nav>
           <Footer/>
