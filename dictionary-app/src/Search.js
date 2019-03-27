@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import Definition from './Definition'
 import News from './News'
-import staricon from './images/staricon.svg'
-
 
 class Search extends Component {
     render(){
@@ -23,7 +21,6 @@ class Search extends Component {
                 renderStems={this.props.renderStems}
                 shortdef={this.props.shortdef}
             />
-            <div><img src={staricon} alt="" className="star-icon" onClick={this.handleClick}/></div>
             <News keyword={this.props.keyword}/>
         </div>
     )

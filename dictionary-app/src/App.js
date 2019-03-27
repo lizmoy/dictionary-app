@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Link } from 'react-router-dom'
 import Homepage from './Homepage'
 import Search from './Search'
-import PocketDictionary from './PocketDictionary'
+import Buzzwords from './Buzzwords'
 import Footer from './Footer'
 
 const api_key = process.env.REACT_APP_API_KEY
@@ -81,7 +81,7 @@ class App extends Component {
             <ul className="nav">
               <li className="home"><Link to="/">Home</Link></li>
               <li className="search"><Link to="/search">Search</Link></li>
-              <li className="pocket"><Link to="/pocket">Pocket Dictionary</Link></li>
+              <li className="pocket"><Link to="/buzzwords">Buzzwords</Link></li>
             </ul>
             <Route exact path="/" component={Homepage} />
             <Route path="/search"
@@ -96,7 +96,7 @@ class App extends Component {
                   shortdef={this.state.shortdef}
                   {...props} />}
             />
-            <Route path="/pocket" component={PocketDictionary} />
+            <Route path="/buzzwords" component={Buzzwords} />
           </nav>
           <Footer/>
         </div>

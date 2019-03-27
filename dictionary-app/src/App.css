@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Unicase');
+@import url('https://fonts.googleapis.com/css?family=Poppins:500,600');
+
+body {
+  background-color: #fcaa1b;
+}
+
 .App {
   text-align: center;
 }
@@ -14,15 +21,27 @@
 .home,
 .search,
 .pocket {
-  font-size: 16pt;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20pt;
+  margin: 20px;
+}
+
+a:visited {
+  color: #c40b0b;
+}
+
+.title {
+  margin: 30px 30px 0px 30px;
+}
+
+.tagline {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20pt;
   font-weight: bold;
-  margin: 8px;
+  margin: 0 auto;
 }
 
 .news-icon {
   max-width: 60px;
 }
 
-.star-icon {
-  max-width: 65px;
-}
