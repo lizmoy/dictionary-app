@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Definition from './Definition'
+import News from './News'
 import staricon from './images/staricon.svg'
 
 
@@ -12,14 +14,17 @@ class Search extends Component {
                 </label>
                 <input className="button" type="submit" value="Submit" />
             </form>
-            <div className="definition">
-                <h1>{this.props.keyword}</h1>
-                <p>{this.props.pronunciation}</p>
-                <p>{this.props.partOfSpeech}</p>
-                <div>{this.props.renderStems()}</div>
-                <p>{this.props.shortdef}</p>
-            </div>
+            <Definition
+                keyword={this.props.keyword}
+                handleChange={this.props.handleChange}
+                handleSubmit={this.props.handleSubmit}
+                pronunciation={this.props.pronunciation}
+                partOfSpeech={this.props.partOfSpeech}
+                renderStems={this.props.renderStems}
+                shortdef={this.props.shortdef}
+            />
             <div><img src={staricon} alt="" className="star-icon" onClick={this.handleClick}/></div>
+            <News keyword={this.props.keyword}/>
         </div>
     )
     

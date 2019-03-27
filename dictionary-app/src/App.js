@@ -3,7 +3,6 @@ import './App.css';
 import { Route, Link } from 'react-router-dom'
 import Homepage from './Homepage'
 import Search from './Search'
-import News from './News'
 import PocketDictionary from './PocketDictionary'
 import Footer from './Footer'
 
@@ -97,7 +96,6 @@ class App extends Component {
                   shortdef={this.state.shortdef}
                   {...props} />}
             />
-            <News keyword={this.state.keyword}/>
             <Route path="/pocket" component={PocketDictionary} />
           </nav>
           <Footer/>
