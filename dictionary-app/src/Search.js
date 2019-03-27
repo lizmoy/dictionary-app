@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import staricon from './images/staricon.svg'
 import newsicon from './images/newsicon.svg'
 
 const news_key = process.env.REACT_APP_NEWS_KEY
@@ -58,6 +59,7 @@ class Search extends Component {
                 <div>{this.props.renderStems()}</div>
                 <p>{this.props.shortdef}</p>
             </div>
+            <div><img src={staricon} alt="" className="star-icon" onClick={this.handleClick}/></div>
             <div><img src={newsicon} alt="" className="news-icon" onClick={this.handleClick}/></div>
             {this.props.keyword &&
                 <div className="articles">{this.renderArticles()}</div>}
