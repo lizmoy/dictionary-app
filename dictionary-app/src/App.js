@@ -4,6 +4,7 @@ import { Route, Link } from 'react-router-dom'
 import Homepage from './Homepage'
 import Search from './Search'
 import PocketDictionary from './PocketDictionary'
+import Footer from './Footer'
 
 const api_key = process.env.REACT_APP_API_KEY
 
@@ -17,10 +18,7 @@ class App extends Component {
       versions: [],
       shortdef: "",
       partOfSpeech: "",
-      // quote1Text: "",
-      // quote1Author: "",
-      // quote2Text: "",
-      // quote2Author: "",
+      audio: ""
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -57,23 +55,16 @@ class App extends Component {
             keyword: json[0].meta.id,
             versions: json[0].meta.stems,
             shortdef: json[0].shortdef,
-            partOfSpeech: json[0].fl
-            // quote1Text: json[0].def[0].sseq[0][0][1].dt[1][1][0].t,
-            // quote1Author: json[0].def[0].sseq[0][0][1].dt[1][1][0].aq.auth,
-            // quote2Text: json[0].def[0].sseq[0][0][1].dt[1][1][1].t,
-            // quote2Author: json[0].def[0].sseq[0][0][1].dt[1][1][1].aq.auth
+            partOfSpeech: json[0].fl,
           })
           console.log('word', this.state.word)
           console.log('keyword', this.state.keyword)
           console.log('versions', this.state.versions)
-          console.log('quote1Text', this.state.quote1Text)
-          console.log('quote1Author', this.state.quote1Author)
         })
         .catch(e =>
           console.log(e)
         )
     }
-
 
     renderStems() {
       let stems = this.state.versions
@@ -86,10 +77,10 @@ class App extends Component {
       return (
         <div className="App">
           <nav>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/search">Search</Link></li>
-              <li><Link to="/pocket">Pocket Dictionary</Link></li>
+            <ul className="nav">
+              <li className="home"><Link to="/">Home</Link></li>
+              <li className="search"><Link to="/search">Search</Link></li>
+              <li className="pocket"><Link to="/pocket">Pocket Dictionary</Link></li>
             </ul>
             <Route exact path="/" component={Homepage} />
             <Route path="/search"
@@ -101,14 +92,11 @@ class App extends Component {
                   partOfSpeech={this.state.partOfSpeech}
                   renderStems={this.renderStems}
                   shortdef={this.state.shortdef}
-                  // quote1Text={this.state.quote1Text}
-                  // quote1Author={this.state.quote1Author}
-                  // quote2Text={this.state.quote2Text}
-                  // quote2Author={this.state.quote2Author}
                   {...props} />}
             />
             <Route path="/pocket" component={PocketDictionary} />
           </nav>
+          <Footer/>
         </div>
       );
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import newsicon from './images/newsicon.svg'
 
 const news_key = process.env.REACT_APP_NEWS_KEY
 
@@ -56,25 +57,10 @@ class Search extends Component {
                 <p>{this.props.partOfSpeech}</p>
                 <div>{this.props.renderStems()}</div>
                 <p>{this.props.shortdef}</p>
-
-                {/* <div className="quote-1">
-                    {this.props.quote1Text &&
-                        <p>{this.props.quote1Text}</p>}
-                    {this.props.quote1Author &&
-                        <p>{this.props.quote1Author}</p>}
-                </div>
-                <div className="quote-2">
-                    {this.props.quote2Text &&
-                        <p>{this.props.quote2Text}</p>}
-                    {this.props.quote2Author &&
-                        <p>{this.props.quote2Author}</p>}
-                </div> */}
             </div>
-        
-            <button onClick={this.handleClick}>Get News</button>
+            <div><img src={newsicon} alt="" className="news-icon" onClick={this.handleClick}/></div>
             {this.props.keyword &&
-                <div className="articles">{this.renderArticles()}</div>
-            }
+                <div className="articles">{this.renderArticles()}</div>}
             </div>
     )
     
