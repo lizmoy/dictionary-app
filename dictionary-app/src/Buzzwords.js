@@ -9,7 +9,11 @@ class Buzzwords extends Component{
             keyword: '',
             partOfSpeech: '',
             pronunciation: '',
-            shortdef: ''      
+            shortdef: '',
+            quote1Text: '',
+            quote1Author: '',
+            quote2Text: '',
+            quote2Author: ''
         }
         this.handleMSClick = this.handleMSClick.bind(this)
         this.handleBGClick = this.handleBGClick.bind(this)
@@ -28,11 +32,19 @@ class Buzzwords extends Component{
         let pOS= this.state.data[0].partOfSpeech
         let prs= this.state.data[0].pronunciation
         let def= this.state.data[0].shortdef
+        let q1= this.state.data[0].quote1Text
+        let q1auth= this.state.data[0].quote1Author
+        let q2= this.state.data[0].quote2Text
+        let q2auth= this.state.data[0].quote2Author
         this.setState({
             keyword: word,
             partOfSpeech: pOS,
             pronunciation: prs,
-            shortdef: def
+            shortdef: def,
+            quote1Text: q1,
+            quote1Author: q1auth,
+            quote2Text: q2,
+            quote2Author: q2auth
         })
     }
 
@@ -43,11 +55,19 @@ class Buzzwords extends Component{
         let pOS= this.state.data[1].partOfSpeech
         let prs= this.state.data[1].pronunciation
         let def= this.state.data[1].shortdef
+        let q1= this.state.data[1].quote1Text
+        let q1auth= this.state.data[1].quote1Author
+        let q2= this.state.data[1].quote2Text
+        let q2auth= this.state.data[1].quote2Author
         this.setState({
             keyword: word,
             partOfSpeech: pOS,
             pronunciation: prs,
-            shortdef: def
+            shortdef: def,
+            quote1Text: q1,
+            quote1Author: q1auth,
+            quote2Text: q2,
+            quote2Author: q2auth
         })
     }
 
@@ -58,11 +78,19 @@ class Buzzwords extends Component{
         let pOS= this.state.data[2].partOfSpeech
         let prs= this.state.data[2].pronunciation
         let def= this.state.data[2].shortdef
+        let q1= this.state.data[2].quote1Text
+        let q1auth= this.state.data[2].quote1Author
+        let q2= this.state.data[2].quote2Text
+        let q2auth= this.state.data[2].quote2Author
         this.setState({
             keyword: word,
             partOfSpeech: pOS,
             pronunciation: prs,
-            shortdef: def
+            shortdef: def,
+            quote1Text: q1,
+            quote1Author: q1auth,
+            quote2Text: q2,
+            quote2Author: q2auth
         })
     }
 
@@ -73,11 +101,19 @@ class Buzzwords extends Component{
         let pOS= this.state.data[3].partOfSpeech
         let prs= this.state.data[3].pronunciation
         let def= this.state.data[3].shortdef
+        let q1= this.state.data[3].quote1Text
+        let q1auth= this.state.data[3].quote1Author
+        let q2= this.state.data[3].quote2Text
+        let q2auth= this.state.data[3].quote2Author
         this.setState({
             keyword: word,
             partOfSpeech: pOS,
             pronunciation: prs,
-            shortdef: def
+            shortdef: def,
+            quote1Text: q1,
+            quote1Author: q1auth,
+            quote2Text: q2,
+            quote2Author: q2auth
         })
     }
 
@@ -88,11 +124,19 @@ class Buzzwords extends Component{
         let pOS= this.state.data[4].partOfSpeech
         let prs= this.state.data[4].pronunciation
         let def= this.state.data[4].shortdef
+        let q1= this.state.data[4].quote1Text
+        let q1auth= this.state.data[4].quote1Author
+        let q2= this.state.data[4].quote2Text
+        let q2auth= this.state.data[4].quote2Author
         this.setState({
             keyword: word,
             partOfSpeech: pOS,
             pronunciation: prs,
-            shortdef: def
+            shortdef: def,
+            quote1Text: q1,
+            quote1Author: q1auth,
+            quote2Text: q2,
+            quote2Author: q2auth
         })
     }
 
@@ -103,11 +147,19 @@ class Buzzwords extends Component{
         let pOS= this.state.data[5].partOfSpeech
         let prs= this.state.data[5].pronunciation
         let def= this.state.data[5].shortdef
+        let q1= this.state.data[5].quote1Text
+        let q1auth= this.state.data[5].quote1Author
+        let q2= this.state.data[5].quote2Text
+        let q2auth= this.state.data[5].quote2Author
         this.setState({
             keyword: word,
             partOfSpeech: pOS,
             pronunciation: prs,
-            shortdef: def
+            shortdef: def,
+            quote1Text: q1,
+            quote1Author: q1auth,
+            quote2Text: q2,
+            quote2Author: q2auth
         })
     }
 
@@ -118,11 +170,19 @@ class Buzzwords extends Component{
         let pOS= this.state.data[6].partOfSpeech
         let prs= this.state.data[6].pronunciation
         let def= this.state.data[6].shortdef
+        let q1= this.state.data[6].quote1Text
+        let q1auth= this.state.data[6].quote1Author
+        let q2= this.state.data[6].quote2Text
+        let q2auth= this.state.data[6].quote2Author
         this.setState({
             keyword: word,
             partOfSpeech: pOS,
             pronunciation: prs,
-            shortdef: def
+            shortdef: def,
+            quote1Text: q1,
+            quote1Author: q1auth,
+            quote2Text: q2,
+            quote2Author: q2auth
         })
     }
 
@@ -133,11 +193,19 @@ class Buzzwords extends Component{
         let pOS= this.state.data[7].partOfSpeech
         let prs= this.state.data[7].pronunciation
         let def= this.state.data[7].shortdef
+        let q1= this.state.data[7].quote1Text
+        let q1auth= this.state.data[7].quote1Author
+        let q2= this.state.data[7].quote2Text
+        let q2auth= this.state.data[7].quote2Author
         this.setState({
             keyword: word,
             partOfSpeech: pOS,
             pronunciation: prs,
-            shortdef: def
+            shortdef: def,
+            quote1Text: q1,
+            quote1Author: q1auth,
+            quote2Text: q2,
+            quote2Author: q2auth
         })
     }
 
@@ -160,6 +228,14 @@ class Buzzwords extends Component{
                     {this.state.partOfSpeech}
                     {this.state.pronunciation}
                     {this.state.shortdef}
+                </div>
+                <div className="buzz-quotes">
+                    {this.state.quote1Text}
+                    {this.state.quote1Author}
+                    {this.state.quote2Text &&
+                    <p>{this.state.quote2Text}</p>}
+                    {this.state.quote2Author &&
+                    <p>{this.state.quote2Author}</p>}
                 </div>
             </div>
         )
