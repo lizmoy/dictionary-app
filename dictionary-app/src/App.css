@@ -259,4 +259,7 @@ img {
   .buzz-description {
     width: 85%;
   }
+  .title {
+    width: 90%;
+  }
 }
