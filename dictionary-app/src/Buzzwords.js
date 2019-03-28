@@ -17,6 +17,8 @@ class Buzzwords extends Component{
         this.handleHangryClick = this.handleHangryClick.bind(this)
         this.handleRandoClick = this.handleRandoClick.bind(this)
         this.handleBougClick = this.handleBougClick.bind(this)
+        this.handleTruthClick = this.handleTruthClick.bind(this)
+        this.handleCBClick = this.handleCBClick.bind(this)
     }
 
     handleMSClick(e){
@@ -109,6 +111,36 @@ class Buzzwords extends Component{
         })
     }
 
+    handleTruthClick(e){
+        e.stopPropagation()
+        console.log('handleTruthClick is running')
+        let word = this.state.data[6].keyword
+        let pOS= this.state.data[6].partOfSpeech
+        let prs= this.state.data[6].pronunciation
+        let def= this.state.data[6].shortdef
+        this.setState({
+            keyword: word,
+            partOfSpeech: pOS,
+            pronunciation: prs,
+            shortdef: def
+        })
+    }
+
+    handleCBClick(e){
+        e.stopPropagation()
+        console.log('handleCBClick is running')
+        let word = this.state.data[7].keyword
+        let pOS= this.state.data[7].partOfSpeech
+        let prs= this.state.data[7].pronunciation
+        let def= this.state.data[7].shortdef
+        this.setState({
+            keyword: word,
+            partOfSpeech: pOS,
+            pronunciation: prs,
+            shortdef: def
+        })
+    }
+
     render(){
         return(
             <div className="buzzword-page">
@@ -120,8 +152,8 @@ class Buzzwords extends Component{
                     <button className="buzz-button" onClick={this.handleHangryClick}>hangry</button>
                     <button className="buzz-button" onClick={this.handleRandoClick}>rando</button>
                     <button className="buzz-button" onClick={this.handleBougClick}>bougie</button>
-                    <button className="buzz-button">truther</button>
-                    <button className="buzz-button">clickbait</button>
+                    <button className="buzz-button" onClick={this.handleTruthClick}>truther</button>
+                    <button className="buzz-button" onClick={this.handleCBClick}>clickbait</button>
                 </div>
                 <div className="buzz-definitions">
                     {this.state.keyword}
