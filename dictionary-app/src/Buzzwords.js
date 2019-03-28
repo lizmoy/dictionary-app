@@ -12,6 +12,7 @@ class Buzzwords extends Component{
             shortdef: ''      
         }
         this.handleMSClick = this.handleMSClick.bind(this)
+        this.handleBGClick = this.handleBGClick.bind(this)
     }
 
     handleMSClick(e){
@@ -29,13 +30,28 @@ class Buzzwords extends Component{
         })
     }
 
+    handleBGClick(e){
+        e.stopPropagation()
+        console.log('handleBGClick is working')
+        let word = this.state.data[1].keyword
+        let pOS= this.state.data[1].partOfSpeech
+        let prs= this.state.data[1].pronunciation
+        let def= this.state.data[1].shortdef
+        this.setState({
+            keyword: word,
+            partOfSpeech: pOS,
+            pronunciation: prs,
+            shortdef: def
+        })
+    }
+
     render(){
         return(
             <div className="buzzword-page">
                 <p className="buzz-description">A selection of words added to the Merriam Webster Dictionary between 2015-2018. Incorporate these into your vocabulary and ease through social situations with your newfound knowledge.</p>
                 <div className="buttons">
                     <button className="buzz-button" onClick={this.handleMSClick}>mansplain</button>
-                    <button className="buzz-button">bingeable</button>
+                    <button className="buzz-button" onClick={this.handleBGClick}>bingeable</button>
                     <button className="buzz-button">humblebrag</button>
                     <button className="buzz-button">hangry</button>
                     <button className="buzz-button">rando</button>
