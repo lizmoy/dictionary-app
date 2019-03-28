@@ -112,45 +112,9 @@ a:visited {
 }
 
 .search-results {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-}
-
-.buzzword-page {
-  height: 80vh;
-}
-
-.buzz-description {
-  width: 700px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20pt;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.buttons {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
-
-.buzz-button {
-  background-color: #fcaa1b;
-  font-family: 'Zangezi';
-  font-size: 25pt;
-  border: none;
-  border-bottom: 2px solid black;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-
-.buzz-button:hover {
-  background-color: #d1bdfc;
-}
-
-.buzz-button:focus {
-  outline: none;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .keyword {
@@ -236,13 +200,6 @@ a:visited {
   margin: 5px;
 }
 
-.footer {
-  height: 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
 img {
   max-width: 300px;
   max-height: 300px;
@@ -250,9 +207,90 @@ img {
   margin: 10px 0px 10px 0px;
 }
 
+.footer {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .footer-text {
   font-family: 'Inconsolata', monospace;
   font-size: 14pt;
+}
+
+.buzzword-page {
+  height: 80vh;
+}
+
+.buzz-description {
+  width: 700px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20pt;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.buzz-button {
+  background-color: #fcaa1b;
+  font-family: 'Zangezi';
+  font-size: 25pt;
+  border: none;
+  border-bottom: 2px solid black;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.buzz-button:hover {
+  background-color: #d1bdfc;
+}
+
+.buzz-button:focus {
+  outline: none;
+}
+
+.buzz-definitions {
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  max-width: 600px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.buzz-keyword {
+  font-family: 'Zangezi';
+  font-size: 30pt;
+  color: blue;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.buzz-pos {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16pt;
+  margin: 0;
+}
+
+.buzz-prs {
+  font-family: 'Zangezi';
+  font-size: 16pt;
+  font-style: italic;
+  margin: 0;
+}
+
+.buzz-def {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18pt;
+  font-weight: bold;
+  margin: 0;
 }
 
 @media screen and (max-width: 1259px) and (min-width: 375px) {

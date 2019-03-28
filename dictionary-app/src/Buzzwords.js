@@ -224,18 +224,18 @@ class Buzzwords extends Component{
                     <button className="buzz-button" onClick={this.handleCBClick}>clickbait</button>
                 </div>
                 <div className="buzz-definitions">
-                    <p>{this.state.keyword}</p>
-                    <p>{this.state.partOfSpeech}</p>
-                    <p>{this.state.pronunciation}</p>
-                    <p>{this.state.shortdef}</p>
+                    <p className="buzz-keyword">{this.state.keyword}</p>
+                    <p className="buzz-pos">{this.state.partOfSpeech}</p>
+                    <p className="buzz-prs">{this.state.pronunciation}</p>
+                    <p className="buzz-def">{this.state.shortdef}</p>
                 </div>
                 <div className="buzz-quotes">
-                    <p>{this.state.quote1Text}</p>
-                    <p>{this.state.quote1Author}</p>
+                    <p className="buzz-q1">{this.state.quote1Text}</p>
+                    <p className="buzz-q1auth">{this.state.quote1Author}</p>
                     {this.state.quote2Text &&
-                    <p>{this.state.quote2Text}</p>}
+                    <p className="buzz-q2">{this.state.quote2Text}</p>}
                     {this.state.quote2Author &&
-                    <p>{this.state.quote2Author}</p>}
+                    <p className="buzz-q2auth">{this.state.quote2Author}</p>}
                 </div>
             </div>
         )
