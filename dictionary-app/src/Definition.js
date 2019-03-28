@@ -2,7 +2,7 @@ import React from 'react';
 
 function Definition(props){
     return(
-        <div className={props.isFilled ? "color-fill" : "no-fill"} id="definition">
+        <div className="definition">
             <div className="def-1">
                 <h1 className="keyword">{props.keyword}</h1>
                 <p className="pos">{props.partOfSpeech}</p>

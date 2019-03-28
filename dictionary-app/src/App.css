@@ -16,7 +16,7 @@
 body {
   background-color: #fcaa1b;
   max-width: 100%;
-  max-height: 100%;
+  min-height: 100vh;
 }
 
 .App {
@@ -72,15 +72,15 @@ a:visited {
   height: 80vh;
 }
 
-.color-fill {
+/* .color-fill {
   background-color: #D1BDFC;
 }
 
 .no-fill {
   background-color: #fcaa1b;
-}
+} */
 
-#definition {
+.definition {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -117,12 +117,6 @@ a:visited {
    justify-content: center;
 }
 
-.stems {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
-
 .buzzword-page {
   height: 80vh;
 }
@@ -147,6 +141,16 @@ a:visited {
   font-size: 25pt;
   border: none;
   border-bottom: 2px solid black;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.buzz-button:hover {
+  background-color: #d1bdfc;
+}
+
+.buzz-button:focus {
+  outline: none;
 }
 
 .keyword {
@@ -170,9 +174,11 @@ a:visited {
 
 .stems {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
+  max-height: 400px;
   font-family: 'Poppins', sans-serif;
   font-size: 14pt;
+
 }
 
 .stem {
@@ -192,6 +198,44 @@ a:visited {
   max-width: 60px;
 }
 
+.articles {
+  display: flex;
+  flex-flow: row wrap; 
+  justify-content: space-between;
+  align-self: center;
+  margin: 10px auto 50px;
+  padding: 8px;
+}
+
+.article {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 10px 40px 10px 40px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.article-title {
+  max-width: 500px;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 3px;
+  margin: 5px;
+}
+
+.article-author {
+  max-width: 500px;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 3px;
+  margin: 5px;
+}
+
 .footer {
   height: 80px;
   display: flex;
@@ -199,7 +243,20 @@ a:visited {
   justify-content: center;
 }
 
+img {
+  max-width: 300px;
+  max-height: 300px;
+  align-self: center;
+  margin: 10px 0px 10px 0px;
+}
+
 .footer-text {
   font-family: 'Inconsolata', monospace;
   font-size: 14pt;
+}
+
+@media screen and (max-width: 1259px) and (min-width: 375px) {
+  .buzz-description {
+    width: 85%;
+  }
 }

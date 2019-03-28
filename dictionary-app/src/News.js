@@ -14,7 +14,7 @@ class News extends Component {
     }
 
     getNews(){
-        let endPoint = `https://newsapi.org/v2/everything?q=${this.props.keyword}&apiKey=${news_key}&pageSize=3`
+        let endPoint = `https://newsapi.org/v2/everything?q=${this.props.keyword}&apiKey=${news_key}&pageSize=6`
         fetch(endPoint)
         .then((response) => {return response.json()})
         .then((json) => {
@@ -25,8 +25,8 @@ class News extends Component {
     renderArticles() {
         return this.state.news.map(article => (
         <div className="article" key={Math.random()}>
-            <p className="title"key={Math.random()}>{article.title}</p>
-            <p className="author"key={Math.random()}>{`by: ${article.author}`}</p>
+            <p className="article-title"key={Math.random()}>{article.title}</p>
+            <p className="article-author"key={Math.random()}>{`by: ${article.author}`}</p>
             <a href={article.url}>Link</a> 
             <img src={article.urlToImage} alt=""/>
         </div>
@@ -46,8 +46,7 @@ class News extends Component {
         return(
             <div>
                 <div className="icon-div"><img src={newsicon} alt="" className="news-icon" onClick={this.handleClick}/></div>
-                {this.props.keyword &&
-                    <div className="articles">{this.renderArticles()}</div>}
+                <div className="articles">{this.renderArticles()}</div>
             </div>
         )
     }
