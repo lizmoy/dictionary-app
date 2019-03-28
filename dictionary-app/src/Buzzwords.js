@@ -13,7 +13,8 @@ class Buzzwords extends Component{
             quote1Text: '',
             quote1Author: '',
             quote2Text: '',
-            quote2Author: ''
+            quote2Author: '',
+            isClicked: false
         }
         this.handleMSClick = this.handleMSClick.bind(this)
         this.handleBGClick = this.handleBGClick.bind(this)
@@ -44,7 +45,8 @@ class Buzzwords extends Component{
             quote1Text: `"${q1}"`,
             quote1Author: `- ${q1auth}`,
             quote2Text: `"${q2}"`,
-            quote2Author: `- ${q2auth}`
+            quote2Author: `- ${q2auth}`,
+            isClicked: !this.state.isClicked
         })
     }
 
@@ -223,19 +225,23 @@ class Buzzwords extends Component{
                     <button className="buzz-button" onClick={this.handleTruthClick}>truther</button>
                     <button className="buzz-button" onClick={this.handleCBClick}>clickbait</button>
                 </div>
-                <div className="buzz-definitions">
+                <div className={this.state.isClicked ? "border" : "no-border"} id="buzz-definitions">
                     <p className="buzz-keyword">{this.state.keyword}</p>
                     <p className="buzz-pos">{this.state.partOfSpeech}</p>
                     <p className="buzz-prs">{this.state.pronunciation}</p>
                     <p className="buzz-def">{this.state.shortdef}</p>
                 </div>
                 <div className="buzz-quotes">
-                    <p className="buzz-q1">{this.state.quote1Text}</p>
-                    <p className="buzz-q1auth">{this.state.quote1Author}</p>
-                    {this.state.quote2Text &&
-                    <p className="buzz-q2">{this.state.quote2Text}</p>}
-                    {this.state.quote2Author &&
-                    <p className="buzz-q2auth">{this.state.quote2Author}</p>}
+                    <div className="buzz-quote1">
+                        <p className="buzz-q1">{this.state.quote1Text}</p>
+                        <p className="buzz-q1auth">{this.state.quote1Author}</p>
+                    </div>
+                    <div className="buzz-quote2">
+                        {this.state.quote2Text &&
+                        <p className="buzz-q2">{this.state.quote2Text}</p>}
+                        {this.state.quote2Author &&
+                        <p className="buzz-q2auth">{this.state.quote2Author}</p>}
+                    </div>
                 </div>
             </div>
         )

@@ -255,14 +255,23 @@ img {
   outline: none;
 }
 
-.buzz-definitions {
+#buzz-definitions {
   display: flex;
   flex-direction: column;
   margin: 40px auto;
   max-width: 600px;
+  /* border: 1px solid black;
+  border-radius: 8px; */
+  padding: 20px;
+}
+
+.border {
   border: 1px solid black;
   border-radius: 8px;
-  padding: 20px;
+}
+
+.no-border {
+  border: none;
 }
 
 .buzz-keyword {
@@ -291,6 +300,55 @@ img {
   font-size: 18pt;
   font-weight: bold;
   margin: 0;
+}
+
+.buzz-quotes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.buzz-quotes1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.buzz-quotes2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.buzz-q1 {
+  font-family: 'Zangezi';
+  font-style: italic;
+  font-size: 30pt;
+  color: #e8063b;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.buzz-q1auth {
+  font-family: 'Zangezi';
+  font-size: 20pt;
+  color: black;
+  margin: 0 auto;
+}
+
+.buzz-q2 {
+  font-family: 'Zangezi';
+  font-style: italic;
+  font-size: 30pt;
+  color: #b805a0;
+  max-width: 1000px;
+  margin: 50px auto 0px;
+}
+
+.buzz-q2auth {
+  font-family: 'Zangezi';
+  font-size: 20pt;
+  color: black;
+  margin: 0px auto;
 }
 
 @media screen and (max-width: 1259px) and (min-width: 375px) {
