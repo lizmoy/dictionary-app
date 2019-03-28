@@ -77,6 +77,12 @@ a:visited {
    justify-content: center;
 }
 
+.base {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
 .stems {
   display: flex;
   flex-flow: row wrap;
@@ -90,13 +96,14 @@ a:visited {
 .keyword {
   font-family: "Zangezi";
   font-size: 60pt;
-  margin: 0 auto;
+  margin: auto 200px;
 }
 
 .pronunciation {
   font-family: "Zangezi";
   font-style: italic;
   font-size: 24pt;
+  align-content: flex-end;
 }
 
 .pos {

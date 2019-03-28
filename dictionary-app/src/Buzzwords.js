@@ -5,15 +5,13 @@ class Buzzwords extends Component{
         return(
             <div className="buzzword-page">
                 <button>mansplain</button>
-                <button>welp</button>
                 <button>bingeable</button>
-                <button>truther</button>
                 <button>humblebrag</button>
-                <button>athleisure</button>
-                <button>dox</button>
-                <button>bougie</button>
                 <button>hangry</button>
                 <button>rando</button>
+                <button>bougie</button>
+                <button>truther</button>
+                <button>clickbait</button>
                 <div>
                 </div>
             </div>
