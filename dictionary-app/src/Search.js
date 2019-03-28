@@ -21,6 +21,7 @@ class Search extends Component {
                 partOfSpeech={this.props.partOfSpeech}
                 renderStems={this.props.renderStems}
                 shortdef={this.props.shortdef}
+                isFilled={this.props.isFilled}
             />
             <News keyword={this.props.keyword}/>
             </div>

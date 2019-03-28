@@ -18,7 +18,8 @@ class App extends Component {
       versions: [],
       shortdef: "",
       partOfSpeech: "",
-      pronunciation: ""
+      pronunciation: "",
+      isFilled: false
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -27,7 +28,10 @@ class App extends Component {
 
   handleChange(event) {
     console.log("handleChange is running ", event.target.value)
-    this.setState({ keyword: event.target.value })
+    this.setState({ 
+      keyword: event.target.value, 
+      isFilled: !this.state.isFilled
+    })
   }
 
   handleSubmit(event) {
@@ -56,7 +60,7 @@ class App extends Component {
             versions: json[0].meta.stems,
             shortdef: json[0].shortdef,
             partOfSpeech: json[0].fl,
-            pronunciation: json[0].hwi.prs[0].mw
+            pronunciation: json[0].hwi.prs[0].mw,
           })
           console.log('word', this.state.word)
           console.log('keyword', this.state.keyword)
@@ -70,34 +74,35 @@ class App extends Component {
     renderStems() {
       let stems = this.state.versions
       return stems.map(stem => (
-        <p key={Math.random()}>{stem}</p>
+        <p className="stem" key={Math.random()}>{stem}</p>
       ))
     }
 
     render() {
       return (
         <div className="App">
-          <nav>
-            <ul className="nav">
-              <li className="home"><Link to="/">Home</Link></li>
-              <li className="search"><Link to="/search">Search</Link></li>
-              <li className="pocket"><Link to="/buzzwords">Buzzwords</Link></li>
-            </ul>
-            <Route exact path="/" component={Homepage} />
-            <Route path="/search"
-              render={(props) =>
-                <Search
-                  keyword={this.state.keyword}
-                  handleChange={this.handleChange}
-                  handleSubmit={this.handleSubmit}
-                  pronunciation={this.state.pronunciation}
-                  partOfSpeech={this.state.partOfSpeech}
-                  renderStems={this.renderStems}
-                  shortdef={this.state.shortdef}
-                  {...props} />}
-            />
-            <Route path="/buzzwords" component={Buzzwords} />
-          </nav>
+            <nav>
+              <ul className="nav">
+                <li className="home"><Link to="/">Home</Link></li>
+                <li className="search"><Link to="/search">Search</Link></li>
+                <li className="pocket"><Link to="/buzzwords">Buzzwords</Link></li>
+              </ul>
+              <Route exact path="/" component={Homepage} />
+              <Route path="/search"
+                render={(props) =>
+                  <Search
+                    keyword={this.state.keyword}
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    pronunciation={this.state.pronunciation}
+                    partOfSpeech={this.state.partOfSpeech}
+                    renderStems={this.renderStems}
+                    shortdef={this.state.shortdef}
+                    isFilled={this.state.isFilled}
+                    {...props} />}
+              />
+              <Route path="/buzzwords" component={Buzzwords} />
+            </nav>
           <Footer/>
         </div>
       );

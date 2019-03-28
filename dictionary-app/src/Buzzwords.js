@@ -41,10 +41,10 @@ class Buzzwords extends Component{
             partOfSpeech: pOS,
             pronunciation: prs,
             shortdef: def,
-            quote1Text: q1,
-            quote1Author: q1auth,
-            quote2Text: q2,
-            quote2Author: q2auth
+            quote1Text: `"${q1}"`,
+            quote1Author: `- ${q1auth}`,
+            quote2Text: `"${q2}"`,
+            quote2Author: `- ${q2auth}`
         })
     }
 
@@ -64,10 +64,10 @@ class Buzzwords extends Component{
             partOfSpeech: pOS,
             pronunciation: prs,
             shortdef: def,
-            quote1Text: q1,
-            quote1Author: q1auth,
-            quote2Text: q2,
-            quote2Author: q2auth
+            quote1Text: `"${q1}"`,
+            quote1Author: `- ${q1auth}`,
+            quote2Text: `"${q2}"`,
+            quote2Author: `- ${q2auth}`
         })
     }
 
@@ -87,10 +87,10 @@ class Buzzwords extends Component{
             partOfSpeech: pOS,
             pronunciation: prs,
             shortdef: def,
-            quote1Text: q1,
-            quote1Author: q1auth,
-            quote2Text: q2,
-            quote2Author: q2auth
+            quote1Text: `"${q1}"`,
+            quote1Author: `- ${q1auth}`,
+            quote2Text: `"${q2}"`,
+            quote2Author: `- ${q2auth}`
         })
     }
 
@@ -110,10 +110,10 @@ class Buzzwords extends Component{
             partOfSpeech: pOS,
             pronunciation: prs,
             shortdef: def,
-            quote1Text: q1,
-            quote1Author: q1auth,
-            quote2Text: q2,
-            quote2Author: q2auth
+            quote1Text: `"${q1}"`,
+            quote1Author: `- ${q1auth}`,
+            quote2Text: `"${q2}"`,
+            quote2Author: `- ${q2auth}`
         })
     }
 
@@ -133,10 +133,10 @@ class Buzzwords extends Component{
             partOfSpeech: pOS,
             pronunciation: prs,
             shortdef: def,
-            quote1Text: q1,
-            quote1Author: q1auth,
-            quote2Text: q2,
-            quote2Author: q2auth
+            quote1Text: `"${q1}"`,
+            quote1Author: `- ${q1auth}`,
+            quote2Text: `"${q2}"`,
+            quote2Author: `- ${q2auth}`
         })
     }
 
@@ -156,8 +156,8 @@ class Buzzwords extends Component{
             partOfSpeech: pOS,
             pronunciation: prs,
             shortdef: def,
-            quote1Text: q1,
-            quote1Author: q1auth,
+            quote1Text: `"${q1}"`,
+            quote1Author: `- ${q1auth}`,
             quote2Text: q2,
             quote2Author: q2auth
         })
@@ -179,10 +179,10 @@ class Buzzwords extends Component{
             partOfSpeech: pOS,
             pronunciation: prs,
             shortdef: def,
-            quote1Text: q1,
-            quote1Author: q1auth,
-            quote2Text: q2,
-            quote2Author: q2auth
+            quote1Text: `"${q1}"`,
+            quote1Author: `- ${q1auth}`,
+            quote2Text: `"${q2}"`,
+            quote2Author: `- ${q2auth}`
         })
     }
 
@@ -202,8 +202,8 @@ class Buzzwords extends Component{
             partOfSpeech: pOS,
             pronunciation: prs,
             shortdef: def,
-            quote1Text: q1,
-            quote1Author: q1auth,
+            quote1Text: `"${q1}"`,
+            quote1Author: `- ${q1auth}`,
             quote2Text: q2,
             quote2Author: q2auth
         })
@@ -212,7 +212,7 @@ class Buzzwords extends Component{
     render(){
         return(
             <div className="buzzword-page">
-                <p className="buzz-description">A selection of words added to the Merriam Webster Dictionary between 2015-2018. Incorporate these into your vocabulary and ease through social situations with your newfound knowledge.</p>
+                <p className="buzz-description">A selection of words added to the Merriam Webster Dictionary between 2015-2018. Incorporate these into your vocabulary and be well equipped to ease through social conversation.</p>
                 <div className="buttons">
                     <button className="buzz-button" onClick={this.handleMSClick}>mansplain</button>
                     <button className="buzz-button" onClick={this.handleBGClick}>bingeable</button>
@@ -224,14 +224,14 @@ class Buzzwords extends Component{
                     <button className="buzz-button" onClick={this.handleCBClick}>clickbait</button>
                 </div>
                 <div className="buzz-definitions">
-                    {this.state.keyword}
-                    {this.state.partOfSpeech}
-                    {this.state.pronunciation}
-                    {this.state.shortdef}
+                    <p>{this.state.keyword}</p>
+                    <p>{this.state.partOfSpeech}</p>
+                    <p>{this.state.pronunciation}</p>
+                    <p>{this.state.shortdef}</p>
                 </div>
                 <div className="buzz-quotes">
-                    {this.state.quote1Text}
-                    {this.state.quote1Author}
+                    <p>{this.state.quote1Text}</p>
+                    <p>{this.state.quote1Author}</p>
                     {this.state.quote2Text &&
                     <p>{this.state.quote2Text}</p>}
                     {this.state.quote2Author &&

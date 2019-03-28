@@ -21,6 +21,7 @@ body {
 
 .App {
   text-align: center;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -71,16 +72,49 @@ a:visited {
   height: 80vh;
 }
 
+.color-fill {
+  background-color: #D1BDFC;
+}
+
+.no-fill {
+  background-color: #fcaa1b;
+}
+
+#definition {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.def-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  max-width: 550px;
+  height: 400px;
+  padding: 10px;
+  margin: 0 30px;
+}
+
+.def-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  max-width: 550px;
+  height: 400px;
+  padding: 10px;
+  margin: 0 30px;
+}
+
 .search-results {
    display: flex;
    flex-direction: column;
    justify-content: center;
-}
-
-.base {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
 }
 
 .stems {
@@ -118,30 +152,40 @@ a:visited {
 .keyword {
   font-family: "Zangezi";
   font-size: 60pt;
-  margin: auto 200px;
+  margin: 0 auto;
 }
 
 .pronunciation {
   font-family: "Zangezi";
   font-style: italic;
   font-size: 24pt;
-  align-content: flex-end;
+  margin: 0 auto;
 }
 
 .pos {
   font-family: 'Poppins', sans-serif;
   font-size: 14pt;
+  margin: 0 auto;
 }
 
 .stems {
+  display: flex;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
   font-size: 14pt;
+}
+
+.stem {
+  align-items: center;
+  margin: 0 auto;
 }
 
 .shortdef {
   font-family: 'Poppins', sans-serif;
-  font-size: 14pt;
+  font-size: 16pt;
   font-weight: bold;
+  margin: 0 auto;
+  max-width: 350px;
 }
 
 .news-icon {
