@@ -13,6 +13,7 @@ class Buzzwords extends Component{
         }
         this.handleMSClick = this.handleMSClick.bind(this)
         this.handleBGClick = this.handleBGClick.bind(this)
+        this.handleHBClick = this.handleHBClick.bind(this)
     }
 
     handleMSClick(e){
@@ -45,6 +46,21 @@ class Buzzwords extends Component{
         })
     }
 
+    handleHBClick(e){
+        e.stopPropagation()
+        console.log('handleHBClick is working')
+        let word = this.state.data[2].keyword
+        let pOS= this.state.data[2].partOfSpeech
+        let prs= this.state.data[2].pronunciation
+        let def= this.state.data[2].shortdef
+        this.setState({
+            keyword: word,
+            partOfSpeech: pOS,
+            pronunciation: prs,
+            shortdef: def
+        })
+    }
+
     render(){
         return(
             <div className="buzzword-page">
@@ -52,7 +68,7 @@ class Buzzwords extends Component{
                 <div className="buttons">
                     <button className="buzz-button" onClick={this.handleMSClick}>mansplain</button>
                     <button className="buzz-button" onClick={this.handleBGClick}>bingeable</button>
-                    <button className="buzz-button">humblebrag</button>
+                    <button className="buzz-button" onClick={this.handleHBClick}>humblebrag</button>
                     <button className="buzz-button">hangry</button>
                     <button className="buzz-button">rando</button>
                     <button className="buzz-button">bougie</button>
