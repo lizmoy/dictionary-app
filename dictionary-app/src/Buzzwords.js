@@ -46,7 +46,7 @@ class Buzzwords extends Component{
             quote1Author: `- ${q1auth}`,
             quote2Text: `"${q2}"`,
             quote2Author: `- ${q2auth}`,
-            isClicked: !this.state.isClicked
+            isClicked: true
         })
     }
 
@@ -69,7 +69,8 @@ class Buzzwords extends Component{
             quote1Text: `"${q1}"`,
             quote1Author: `- ${q1auth}`,
             quote2Text: `"${q2}"`,
-            quote2Author: `- ${q2auth}`
+            quote2Author: `- ${q2auth}`,
+            isClicked: true
         })
     }
 
@@ -92,7 +93,8 @@ class Buzzwords extends Component{
             quote1Text: `"${q1}"`,
             quote1Author: `- ${q1auth}`,
             quote2Text: `"${q2}"`,
-            quote2Author: `- ${q2auth}`
+            quote2Author: `- ${q2auth}`,
+            isClicked: true
         })
     }
 
@@ -115,7 +117,8 @@ class Buzzwords extends Component{
             quote1Text: `"${q1}"`,
             quote1Author: `- ${q1auth}`,
             quote2Text: `"${q2}"`,
-            quote2Author: `- ${q2auth}`
+            quote2Author: `- ${q2auth}`,
+            isClicked: true
         })
     }
 
@@ -138,7 +141,8 @@ class Buzzwords extends Component{
             quote1Text: `"${q1}"`,
             quote1Author: `- ${q1auth}`,
             quote2Text: `"${q2}"`,
-            quote2Author: `- ${q2auth}`
+            quote2Author: `- ${q2auth}`,
+            isClicked: true
         })
     }
 
@@ -161,7 +165,8 @@ class Buzzwords extends Component{
             quote1Text: `"${q1}"`,
             quote1Author: `- ${q1auth}`,
             quote2Text: q2,
-            quote2Author: q2auth
+            quote2Author: q2auth,
+            isClicked: true
         })
     }
 
@@ -184,7 +189,8 @@ class Buzzwords extends Component{
             quote1Text: `"${q1}"`,
             quote1Author: `- ${q1auth}`,
             quote2Text: `"${q2}"`,
-            quote2Author: `- ${q2auth}`
+            quote2Author: `- ${q2auth}`,
+            isClicked: true
         })
     }
 
@@ -207,7 +213,8 @@ class Buzzwords extends Component{
             quote1Text: `"${q1}"`,
             quote1Author: `- ${q1auth}`,
             quote2Text: q2,
-            quote2Author: q2auth
+            quote2Author: q2auth,
+            isClicked: true
         })
     }
 

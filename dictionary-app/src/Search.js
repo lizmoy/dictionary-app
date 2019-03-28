@@ -10,7 +10,7 @@ class Search extends Component {
                 <label>
                     <input className="input" type="text" placeholder="search" value={this.props.keyword} onChange={this.props.handleChange} />
                 </label>
-                <input className="button" type="submit" value="Submit" />
+                <input className="submit" type="submit" value="Submit" />
             </form>
             <div className="search-results">
             <Definition
