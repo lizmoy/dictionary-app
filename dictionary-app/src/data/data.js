@@ -126,16 +126,4 @@ export default [
         quote2Text: "",
         quote2Author: ""
     }
-    // {
-    //     id: 10,
-    //     keyword: "",
-    //     partOfSpeech: "",
-    //     pronunciation: "",
-    //     stems: [],
-    //     shortdef: "",
-    //     quote1Text: "",
-    //     quote1Author: "",
-    //     quote2Text: "",
-    //     quote2Author: ""
-    // }
 ]

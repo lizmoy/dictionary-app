@@ -1,18 +1,53 @@
 import React, { Component } from 'react';
+import data from './data/data'
 
 class Buzzwords extends Component{
+    constructor(props) {
+        super(props)
+        this.state = {
+            data: data,
+            keyword: '',
+            partOfSpeech: '',
+            pronunciation: '',
+            shortdef: ''      
+        }
+        this.handleMSClick = this.handleMSClick.bind(this)
+    }
+
+    handleMSClick(e){
+        e.stopPropagation()
+        console.log('handleMSClick is working')
+        let word = this.state.data[0].keyword
+        let pOS= this.state.data[0].partOfSpeech
+        let prs= this.state.data[0].pronunciation
+        let def= this.state.data[0].shortdef
+        this.setState({
+            keyword: word,
+            partOfSpeech: pOS,
+            pronunciation: prs,
+            shortdef: def
+        })
+    }
+
     render(){
         return(
             <div className="buzzword-page">
-                <button>mansplain</button>
-                <button>bingeable</button>
-                <button>humblebrag</button>
-                <button>hangry</button>
-                <button>rando</button>
-                <button>bougie</button>
-                <button>truther</button>
-                <button>clickbait</button>
-                <div>
+                <p className="buzz-description">A selection of words added to the Merriam Webster Dictionary between 2015-2018. Incorporate these into your vocabulary and ease through social situations with your newfound knowledge.</p>
+                <div className="buttons">
+                    <button className="buzz-button" onClick={this.handleMSClick}>mansplain</button>
+                    <button className="buzz-button">bingeable</button>
+                    <button className="buzz-button">humblebrag</button>
+                    <button className="buzz-button">hangry</button>
+                    <button className="buzz-button">rando</button>
+                    <button className="buzz-button">bougie</button>
+                    <button className="buzz-button">truther</button>
+                    <button className="buzz-button">clickbait</button>
+                </div>
+                <div className="buzz-definitions">
+                    {this.state.keyword}
+                    {this.state.partOfSpeech}
+                    {this.state.pronunciation}
+                    {this.state.shortdef}
                 </div>
             </div>
         )

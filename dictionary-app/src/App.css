@@ -93,6 +93,28 @@ a:visited {
   height: 80vh;
 }
 
+.buzz-description {
+  width: 700px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20pt;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.buzz-button {
+  background-color: #fcaa1b;
+  font-family: 'Zangezi';
+  font-size: 25pt;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
 .keyword {
   font-family: "Zangezi";
   font-size: 60pt;
