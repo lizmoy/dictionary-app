@@ -4,7 +4,7 @@ import title from './images/title.svg'
 
 function Homepage(){ 
     return(
-        <div>
+        <div className="homepage">
             <img src={title} alt="" className="title"/>
             <p className="tagline">a dictionary app for curious conversationalists </p>
         </div>

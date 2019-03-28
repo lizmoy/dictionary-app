@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Buzzwords extends Component{
     render(){
         return(
-            <div>
+            <div className="buzzword-page">
                 <button>mansplain</button>
                 <button>welp</button>
                 <button>bingeable</button>

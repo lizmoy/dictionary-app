@@ -45,7 +45,7 @@ class News extends Component {
     render(){
         return(
             <div>
-                <div><img src={newsicon} alt="" className="news-icon" onClick={this.handleClick}/></div>
+                <div className="icon-div"><img src={newsicon} alt="" className="news-icon" onClick={this.handleClick}/></div>
                 {this.props.keyword &&
                     <div className="articles">{this.renderArticles()}</div>}
             </div>
