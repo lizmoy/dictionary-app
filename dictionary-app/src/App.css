@@ -16,12 +16,12 @@
 body {
   background-color: #fcaa1b;
   max-width: 100%;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .App {
   text-align: center;
-  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -69,16 +69,9 @@ a:visited {
 }
 
 .search-page {
-  height: 80vh;
+  height: 100%;
 }
 
-/* .color-fill {
-  background-color: #D1BDFC;
-}
-
-.no-fill {
-  background-color: #fcaa1b;
-} */
 .instructions {
   width: 700px;
   font-family: 'Poppins', sans-serif;
@@ -250,10 +243,11 @@ img {
 
 .footer {
   height: 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* margin: auto; */
 }
 
 .footer-text {
@@ -262,7 +256,7 @@ img {
 }
 
 .buzzword-page {
-  height: 80vh;
+  height: 100%;
 }
 
 .buzz-description {
@@ -364,7 +358,7 @@ img {
   font-size: 20pt;
   color: #e8063b;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 15px;
 }
 
 .buzz-q1auth {
@@ -379,14 +373,14 @@ img {
   font-size: 20pt;
   color: #b805a0;
   max-width: 900px;
-  margin: 50px auto 0px;
+  margin: 50px 20px 0px 20px;
 }
 
 .buzz-q2auth {
   font-family: 'Zangezi';
   font-size: 20pt;
   color: black;
-  margin: 0px auto;
+  margin: 0px auto 50px;
 }
 
 @media screen and (max-width: 1259px) and (min-width: 375px) {

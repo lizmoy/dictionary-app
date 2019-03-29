@@ -4,7 +4,7 @@ import { Route, Link } from 'react-router-dom'
 import Homepage from './Homepage'
 import Search from './Search'
 import Buzzwords from './Buzzwords'
-// import Footer from './Footer'
+import Footer from './Footer'
 
 const api_key = process.env.REACT_APP_API_KEY
 
@@ -102,7 +102,7 @@ class App extends Component {
               />
               <Route path="/buzzwords" component={Buzzwords} />
             </nav>
-          {/* <Footer/> */}
+          <Footer/>
         </div>
       );
     }

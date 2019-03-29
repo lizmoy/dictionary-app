@@ -1,7 +1,6 @@
 import React from 'react';
 import title from './images/title.svg'
 
-
 function Homepage(){ 
     return(
         <div className="homepage">
