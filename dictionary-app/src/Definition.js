@@ -10,7 +10,7 @@ function Definition(props){
                 <div className="stems">{props.renderStems()}</div>
             </div>
             <div className="def-2">
-                <p className="shortdef">{props.shortdef}</p>
+                <p className={props.isSubmitted ? "outline" : "no-outline"} id="shortdef">{props.shortdef}</p>
             </div>
         </div>
     )

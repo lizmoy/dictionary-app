@@ -14,11 +14,11 @@ class App extends Component {
     this.state = {
       keyword: '',
       wordInfo: [],
-      // word: "",
       versions: [],
       shortdef: "",
       partOfSpeech: "",
-      pronunciation: ""
+      pronunciation: "",
+      isSubmitted: false
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -35,6 +35,7 @@ class App extends Component {
   handleSubmit(event) {
     event.preventDefault()
     console.log("handleSubmit is running")
+    this.setState({isSubmitted: true})
     this.getWord()
   }
 
@@ -54,7 +55,6 @@ class App extends Component {
           let word= this.state.keyword
           this.setState({
             wordInfo: json[0],
-            // word: json[0].meta,
             keyword: word,
             versions: json[0].meta.stems,
             shortdef: json[0].shortdef,
@@ -97,7 +97,7 @@ class App extends Component {
                     partOfSpeech={this.state.partOfSpeech}
                     renderStems={this.renderStems}
                     shortdef={this.state.shortdef}
-                    isFilled={this.state.isFilled}
+                    isSubmitted={this.state.isSubmitted}
                     {...props} />}
               />
               <Route path="/buzzwords" component={Buzzwords} />
