@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Lalezar');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@font-face {
+  font-family: "Zangezi";
+  src: url("fonts/Zangezi04-Regular.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Zangezi";
+  src: url("fonts/Zangezi04-Italic.woff") format('woff');
+  font-style: italic;
+}
+
+body {
+  background-color: #fcaa1b;
+  max-width: 100%;
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home,
+.search,
+.pocket {
+  font-family: 'Inconsolata', monospace;
+  font-size: 20pt;
+  font-weight: bold;
+  margin: 20px;
+}
+
+a:visited {
+  color: black;
+}
+
+.homepage {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 30px 30px 0px 30px;
+  max-width: 100%;
+  height: auto;
+}
+
+.tagline {
+  font-family: 'Lalezar', cursive;
+  font-size: 20pt;
+  margin: 0 auto;
+}
+
+.search-page {
+  height: 100%;
+}
+
+.instructions {
+  width: 700px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20pt;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form {
+  margin: 0 auto;
+}
+
+.input {
+  font-family: 'Inconsolata', monospace;
+  font-size: 12pt;
+  border-radius: 4px;
+  border: 1px solid black;
+  background-color: transparent;
+  outline: none;
+}
+
+.input::placeholder {
+  color: blue;
+}
+
+.submit {
+  font-family: 'Inconsolata', monospace;
+  font-size: 11pt;
+  border-radius: 4px;
+  border-color: black;
+  background-color: rgb(245, 201, 164);
+}
+
+.definition {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 15px auto;
+}
+
+.def-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  max-width: 550px;
+  height: auto;
+  padding: 10px;
+  margin: 0 30px;
+}
+
+.def-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  max-width: 550px;
+  height: auto;
+  padding: 10px;
+  margin: 0 30px;
+}
+
+.outline {
+  border: 1px solid yellow;
+  border-radius: 50%;
+}
+
+.no-outline {
+  border: none;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.keyword {
+  font-family: "Zangezi";
+  font-size: 60pt;
+  margin: 0 auto;
+}
+
+.pronunciation {
+  font-family: "Zangezi";
+  font-style: italic;
+  font-size: 24pt;
+  margin: 0 auto;
+}
+
+.pos {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14pt;
+  margin: 0 auto;
+}
+
+.stems {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 400px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14pt;
+
+}
+
+.stem {
+  align-items: center;
+  margin: 0 auto;
+}
+
+#shortdef {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16pt;
+  font-weight: bold;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+.news-icon {
+  max-width: 60px;
+}
+
+.articles {
+  display: flex;
+  flex-flow: row wrap; 
+  justify-content: space-between;
+  align-self: center;
+  margin: 10px auto 50px;
+  padding: 8px;
+}
+
+.article {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 10px 50px 10px 50px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.article-title {
+  max-width: 500px;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 3px;
+  margin: 5px;
+}
+
+.article-author {
+  max-width: 500px;
+  font-family: 'Proza Libre', sans-serif;
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 3px;
+  margin: 5px;
+}
+
+img {
+  max-width: 300px;
+  max-height: 300px;
+  align-self: center;
+  margin: 10px 0px 10px 0px;
+}
+
+.footer {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: auto;
+}
+
+.footer-text {
+  font-family: 'Inconsolata', monospace;
+  font-size: 14pt;
+}
+
+.buzzword-page {
+  height: 100%;
+}
+
+.buzz-description {
+  width: 700px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20pt;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.buzz-button {
+  background-color: #fcaa1b;
+  font-family: 'Zangezi';
+  font-size: 25pt;
+  border: none;
+  border-bottom: 2px solid black;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.buzz-button:hover {
+  background-color: #d1bdfc;
+}
+
+.buzz-button:focus {
+  outline: none;
+}
+
+#buzz-definitions {
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.border {
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.no-border {
+  border: none;
+}
+
+.buzz-keyword {
+  font-family: 'Zangezi';
+  font-size: 30pt;
+  color: blue;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.buzz-pos {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16pt;
+  margin: 0;
+}
+
+.buzz-prs {
+  font-family: 'Zangezi';
+  font-size: 16pt;
+  font-style: italic;
+  margin: 0;
+}
+
+.buzz-def {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18pt;
+  font-weight: bold;
+  margin: 0;
+}
+
+.buzz-quotes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.buzz-quotes1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.buzz-quotes2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.buzz-q1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20pt;
+  color: #e8063b;
+  max-width: 900px;
+  margin: 0 15px;
+}
+
+.buzz-q1auth {
+  font-family: 'Zangezi';
+  font-size: 20pt;
+  color: black;
+  margin: 0 auto;
+}
+
+.buzz-q2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20pt;
+  color: #b805a0;
+  max-width: 900px;
+  margin: 50px 20px 0px 20px;
+}
+
+.buzz-q2auth {
+  font-family: 'Zangezi';
+  font-size: 20pt;
+  color: black;
+  margin: 0px auto 50px;
+}
+
+@media screen and (max-width: 1259px) and (min-width: 375px) {
+  .buzz-description {
+    width: 85%;
+  }
+  .title {
+    width: 90%;
+  }
+  .instructions {
+    width: 90%
+  }
+}
