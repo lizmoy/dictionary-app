@@ -14,12 +14,11 @@ class App extends Component {
     this.state = {
       keyword: '',
       wordInfo: [],
-      word: "",
+      // word: "",
       versions: [],
       shortdef: "",
       partOfSpeech: "",
-      pronunciation: "",
-      isFilled: false
+      pronunciation: ""
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -30,7 +29,6 @@ class App extends Component {
     console.log("handleChange is running ", event.target.value)
     this.setState({ 
       keyword: event.target.value, 
-      isFilled: !this.state.isFilled
     })
   }
 
@@ -53,10 +51,11 @@ class App extends Component {
         )
         .then(json => {
           console.log('data', json)
+          let word= this.state.keyword
           this.setState({
             wordInfo: json[0],
-            word: json[0].meta,
-            keyword: json[0].meta.id,
+            // word: json[0].meta,
+            keyword: word,
             versions: json[0].meta.stems,
             shortdef: json[0].shortdef,
             partOfSpeech: json[0].fl,
