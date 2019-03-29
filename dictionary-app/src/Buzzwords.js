@@ -28,7 +28,6 @@ class Buzzwords extends Component{
 
     handleMSClick(e){
         e.stopPropagation()
-        console.log('handleMSClick is working')
         let word = this.state.data[0].keyword
         let pOS= this.state.data[0].partOfSpeech
         let prs= this.state.data[0].pronunciation
@@ -52,7 +51,6 @@ class Buzzwords extends Component{
 
     handleBGClick(e){
         e.stopPropagation()
-        console.log('handleBGClick is working')
         let word = this.state.data[1].keyword
         let pOS= this.state.data[1].partOfSpeech
         let prs= this.state.data[1].pronunciation
@@ -76,7 +74,6 @@ class Buzzwords extends Component{
 
     handleHBClick(e){
         e.stopPropagation()
-        console.log('handleHBClick is working')
         let word = this.state.data[2].keyword
         let pOS= this.state.data[2].partOfSpeech
         let prs= this.state.data[2].pronunciation
@@ -100,7 +97,6 @@ class Buzzwords extends Component{
 
     handleHangryClick(e){
         e.stopPropagation()
-        console.log('handleHangryClick is working')
         let word = this.state.data[3].keyword
         let pOS= this.state.data[3].partOfSpeech
         let prs= this.state.data[3].pronunciation
@@ -124,7 +120,6 @@ class Buzzwords extends Component{
 
     handleRandoClick(e){
         e.stopPropagation()
-        console.log('handleRandoClick is working')
         let word = this.state.data[4].keyword
         let pOS= this.state.data[4].partOfSpeech
         let prs= this.state.data[4].pronunciation
@@ -148,7 +143,6 @@ class Buzzwords extends Component{
 
     handleBougClick(e){
         e.stopPropagation()
-        console.log('handleBougClick is running')
         let word = this.state.data[5].keyword
         let pOS= this.state.data[5].partOfSpeech
         let prs= this.state.data[5].pronunciation
@@ -172,7 +166,6 @@ class Buzzwords extends Component{
 
     handleTruthClick(e){
         e.stopPropagation()
-        console.log('handleTruthClick is running')
         let word = this.state.data[6].keyword
         let pOS= this.state.data[6].partOfSpeech
         let prs= this.state.data[6].pronunciation
@@ -196,7 +189,6 @@ class Buzzwords extends Component{
 
     handleCBClick(e){
         e.stopPropagation()
-        console.log('handleCBClick is running')
         let word = this.state.data[7].keyword
         let pOS= this.state.data[7].partOfSpeech
         let prs= this.state.data[7].pronunciation

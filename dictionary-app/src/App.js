@@ -26,7 +26,6 @@ class App extends Component {
   }
 
   handleChange(event) {
-    console.log("handleChange is running ", event.target.value)
     this.setState({ 
       keyword: event.target.value, 
     })
@@ -34,7 +33,6 @@ class App extends Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    console.log("handleSubmit is running")
     this.setState({isSubmitted: true})
     this.getWord()
   }
@@ -51,7 +49,6 @@ class App extends Component {
           response.json()
         )
         .then(json => {
-          console.log('data', json)
           let word= this.state.keyword
           this.setState({
             wordInfo: json[0],
@@ -61,9 +58,6 @@ class App extends Component {
             partOfSpeech: json[0].fl,
             pronunciation: json[0].hwi.prs[0].mw,
           })
-          console.log('word', this.state.word)
-          console.log('keyword', this.state.keyword)
-          console.log('versions', this.state.versions)
         })
         .catch(e =>
           console.log(e)

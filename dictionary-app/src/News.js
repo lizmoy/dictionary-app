@@ -18,7 +18,6 @@ class News extends Component {
         fetch(endPoint)
         .then((response) => {return response.json()})
         .then((json) => {
-          console.log(json)
           this.setState({ news: json.articles })})
     }
 
@@ -35,7 +34,6 @@ class News extends Component {
 
     handleClick(e) {
         e.preventDefault()
-        console.log('handleclick is working')
         this.getNews()
     }
 
